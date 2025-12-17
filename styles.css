@@ -482,6 +482,12 @@ textarea:focus-visible {
   transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 .social-links a:hover,
 .social-links a:focus-visible {
   border-color: var(--color-accent);
