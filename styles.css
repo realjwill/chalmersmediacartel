@@ -2,8 +2,10 @@
   --color-bg: #0c1119;
   --color-bg-alt: #111927;
   --color-text: #f4f1eb;
-  --color-accent: #ee4e4b;
-  --color-accent-soft: #f38b86;
+  --color-accent: #d3ee4b;
+  --color-accent-soft: #c4f386;
+  /* --color-accent: #ee4e4b;
+  --color-accent-soft: #f38b86; */
   --color-muted: #8da1ba;
   --font-base: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
@@ -111,7 +113,7 @@ a:focus-visible {
 
 .hero {
   padding: 6rem 1.25rem 4rem;
-  background: radial-gradient(120% 120% at 20% 20%, rgba(238, 78, 75, 0.18) 0%, rgba(14, 26, 41, 0) 55%),
+  background: radial-gradient(120% 120% at 20% 20%, rgba(194, 238, 75, 0.18)/* rgba(238, 78, 75, 0.18) */ 0%, rgba(14, 26, 41, 0) 55%),
     linear-gradient(140deg, rgba(14, 26, 41, 0.9) 0%, rgba(17, 25, 39, 0.95) 60%, rgba(14, 26, 41, 0.8) 100%);
 }
 
@@ -162,7 +164,7 @@ a:focus-visible {
 .button.primary {
   background: var(--color-accent);
   color: #0b0f14;
-  box-shadow: 0 15px 35px rgba(238, 78, 75, 0.3);
+  box-shadow: 0 15px 35px rgba(170, 238, 75, 0.3);
 }
 
 .button.primary:hover,
@@ -239,7 +241,7 @@ a:focus-visible {
 }
 
 .filter-button.active {
-  background: rgba(238, 78, 75, 0.12);
+  background: rgba(170, 238, 75, 0.12);
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
@@ -263,11 +265,12 @@ a:focus-visible {
 
 .portfolio-item:hover {
   transform: translateY(-4px);
-  border-color: rgba(238, 78, 75, 0.4);
+  border-color: rgba(170, 238, 75, 0.4);
+  /* border-color: rgba(238, 78, 75, 0.4); */
 }
 
 .placeholder {
-  background: linear-gradient(135deg, rgba(238, 78, 75, 0.2), rgba(14, 26, 41, 0.85));
+  background: linear-gradient(135deg, rgba(170, 238, 75, 0.2), rgba(14, 26, 41, 0.85));
   height: 160px;
 }
 
@@ -311,7 +314,7 @@ a:focus-visible {
 .service-card:hover,
 .team-card:hover,
 .press-kit:hover {
-  border-color: rgba(238, 78, 75, 0.4);
+  border-color: rgba(170, 238, 75, 0.4);
   transform: translateY(-2px);
 }
 
@@ -335,7 +338,7 @@ a:focus-visible {
 }
 
 .press {
-  background: radial-gradient(80% 80% at 80% 0%, rgba(238, 78, 75, 0.15), rgba(17, 25, 39, 0));
+  background: radial-gradient(80% 80% at 80% 0%, rgba(170, 238, 75, 0.15), rgba(17, 25, 39, 0));
 }
 
 .press-grid {
