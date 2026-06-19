@@ -26,8 +26,12 @@ if (navToggle && nav) {
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const filter = button.getAttribute('data-filter');
-    filterButtons.forEach((btn) => btn.classList.remove('active'));
+    filterButtons.forEach((btn) => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-pressed', 'false');
+    });
     button.classList.add('active');
+    button.setAttribute('aria-pressed', 'true');
 
     portfolioItems.forEach((item) => {
       const category = item.getAttribute('data-category');

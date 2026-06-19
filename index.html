@@ -7,30 +7,55 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-sports" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18M4.5 6.5a13 13 0 0 0 15 0M4.5 17.5a13 13 0 0 1 15 0"/>
+    </symbol>
+    <symbol id="icon-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l11-2v13"/>
+      <circle cx="6" cy="18" r="3"/>
+      <circle cx="17" cy="16" r="3"/>
+    </symbol>
+    <symbol id="icon-travel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="12" cy="12" r="10"/>
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+    </symbol>
+  </svg>
+
   <header class="site-header">
     <div class="logo-wrap">
       <img src="chalmers-media-trans.png" alt="Chalmers Media Cartel logo" class="logo">
       <span class="site-title">Chalmers Media Cartel</span>
     </div>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#press">Press &amp; Credentials</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-actions">
+      <a class="button primary small" href="docs/ChalmersMedia_PressKit.pdf" target="_blank" rel="noopener">Press Kit</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#press">Press &amp; Credentials</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-glow glow-1"></span>
+        <span class="hero-glow glow-2"></span>
+        <span class="hero-lines"></span>
+        <svg class="hero-sport-graphic"><use href="#icon-sports"></use></svg>
+      </div>
       <div class="hero-content">
         <p class="eyebrow">Media collective • Sports | Music | Travel</p>
         <h1>Cinematic Photo + Video Coverage For Sports, Music, And Travel.</h1>
@@ -43,55 +68,116 @@
       </div>
     </section>
 
+    <section id="press" class="section press">
+      <div class="section-header">
+        <h2>Press &amp; Credentials</h2>
+        <p>Digital press kit for coordinators who need a reliable, credential-ready media crew. Want to confirm directly? <a href="#contact">Contact us</a>.</p>
+      </div>
+      <div class="press-grid">
+        <div class="press-kit">
+          <h3>Press Kit Download</h3>
+          <p>Need the details on hand? Grab the PDF and drop it into your credential approval flow.</p>
+          <a class="button primary" href="docs/ChalmersMedia_PressKit.pdf" target="_blank" rel="noopener">Download Press Kit (PDF)</a>
+        </div>
+        <div>
+          <h3>Who We Cover</h3>
+          <ul class="tag-list">
+            <li>[High school leagues and club programs]</li>
+            <li>[Regional and travel tournaments]</li>
+            <li>[Local venues and touring artists]</li>
+            <li>[City and destination features]</li>
+            <!-- Add real client or league names here -->
+          </ul>
+        </div>
+        <div>
+          <h3>Coverage Experience</h3>
+          <ul class="bullet-list">
+            <li>High school playoff runs and showcase tournaments</li>
+            <li>Weekend long travel ball and AAU events</li>
+            <li>Local and regional music festivals</li>
+            <li>Live sets from independent artists and DJs</li>
+            <li>[Add specific events and locations here]</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Standards And Professionalism</h3>
+          <ul class="bullet-list">
+            <li>Liability insurance carried for assignments <!-- Update with carrier and coverage details --></li>
+            <li>Respect for venue rules, coaching staff, and security teams</li>
+            <li>Non intrusive shooting style that keeps fan sightlines clear</li>
+            <li>Usage guidelines provided on request</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="portfolio" class="section">
       <div class="section-header">
         <h2>Portfolio</h2>
         <p>From packed gyms and late night venues to street level travel stories, we deliver media that looks ready for broadcast and social in one shot.</p>
       </div>
       <div class="filters" aria-label="Portfolio filters">
-        <button class="filter-button active" data-filter="all">All</button>
-        <button class="filter-button" data-filter="sports">Sports</button>
-        <button class="filter-button" data-filter="music">Music</button>
-        <button class="filter-button" data-filter="travel">Travel</button>
+        <button class="filter-button active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" data-filter="sports" aria-pressed="false">Sports</button>
+        <button class="filter-button" data-filter="music" aria-pressed="false">Music</button>
+        <button class="filter-button" data-filter="travel" aria-pressed="false">Travel</button>
       </div>
       <div class="portfolio-grid">
         <article class="portfolio-item" data-category="sports">
-          <div class="placeholder"></div>
+          <div class="placeholder">
+            <svg class="placeholder-icon"><use href="#icon-sports"></use></svg>
+            <span class="placeholder-label">Sample coming soon</span>
+          </div>
           <div class="item-text">
             <h3>Championship Tournament Coverage</h3>
             <p>High-speed action frames and cinematic slow motion clips from multi-day playoff runs.</p>
           </div>
         </article>
         <article class="portfolio-item" data-category="music">
-          <div class="placeholder"></div>
+          <div class="placeholder">
+            <svg class="placeholder-icon"><use href="#icon-music"></use></svg>
+            <span class="placeholder-label">Sample coming soon</span>
+          </div>
           <div class="item-text">
             <h3>Festival Main Stage Set</h3>
             <p>Dynamic stage lighting captured with clean sound beds ready for quick promo edits.</p>
           </div>
         </article>
         <article class="portfolio-item" data-category="travel">
-          <div class="placeholder"></div>
+          <div class="placeholder">
+            <svg class="placeholder-icon"><use href="#icon-travel"></use></svg>
+            <span class="placeholder-label">Sample coming soon</span>
+          </div>
           <div class="item-text">
             <h3>Urban Night Shoot</h3>
             <p>Editorial city visuals with fast turnarounds for destination partners and press.</p>
           </div>
         </article>
         <article class="portfolio-item" data-category="sports">
-          <div class="placeholder"></div>
+          <div class="placeholder">
+            <svg class="placeholder-icon"><use href="#icon-sports"></use></svg>
+            <span class="placeholder-label">Sample coming soon</span>
+          </div>
           <div class="item-text">
             <h3>Sideline + Locker Room Story</h3>
             <p>Behind-the-scenes access documented respectfully for teams and credentialed media.</p>
           </div>
         </article>
         <article class="portfolio-item" data-category="music">
-          <div class="placeholder"></div>
+          <div class="placeholder">
+            <svg class="placeholder-icon"><use href="#icon-music"></use></svg>
+            <span class="placeholder-label">Sample coming soon</span>
+          </div>
           <div class="item-text">
             <h3>Late Night Venue Series</h3>
             <p>Multi-artist sets with sharp stills and reels ready for managers and promoters.</p>
           </div>
         </article>
         <article class="portfolio-item" data-category="travel">
-          <div class="placeholder"></div>
+          <div class="placeholder">
+            <svg class="placeholder-icon"><use href="#icon-travel"></use></svg>
+            <span class="placeholder-label">Sample coming soon</span>
+          </div>
           <div class="item-text">
             <h3>Destination Featurette</h3>
             <p>On-location storytelling built for web, social, and quick broadcast pickups.</p>
@@ -170,49 +256,6 @@
           <li>Fast turnaround and organized delivery</li>
           <li>Built to work in intense, fast paced environments</li>
         </ul>
-      </div>
-    </section>
-
-    <section id="press" class="section press">
-      <div class="section-header">
-        <h2>Press &amp; Credentials</h2>
-        <p>Digital press kit for coordinators who need a reliable, credential-ready media crew.</p>
-      </div>
-      <div class="press-grid">
-        <div>
-          <h3>Who We Cover</h3>
-          <ul class="tag-list">
-            <li>[High school leagues and club programs]</li>
-            <li>[Regional and travel tournaments]</li>
-            <li>[Local venues and touring artists]</li>
-            <li>[City and destination features]</li>
-            <!-- Add real client or league names here -->
-          </ul>
-        </div>
-        <div>
-          <h3>Coverage Experience</h3>
-          <ul class="bullet-list">
-            <li>High school playoff runs and showcase tournaments</li>
-            <li>Weekend long travel ball and AAU events</li>
-            <li>Local and regional music festivals</li>
-            <li>Live sets from independent artists and DJs</li>
-            <li>[Add specific events and locations here]</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Standards And Professionalism</h3>
-          <ul class="bullet-list">
-            <li>Liability insurance carried for assignments <!-- Update with carrier and coverage details --></li>
-            <li>Respect for venue rules, coaching staff, and security teams</li>
-            <li>Non intrusive shooting style that keeps fan sightlines clear</li>
-            <li>Usage guidelines provided on request</li>
-          </ul>
-        </div>
-        <div class="press-kit">
-          <h3>Press Kit Download</h3>
-          <p>Need the details on hand? Grab the PDF and drop it into your credential approval flow.</p>
-          <a class="button primary" href="docs/ChalmersMedia_PressKit.pdf" target="_blank" rel="noopener">Download Press Kit (PDF)</a>
-        </div>
       </div>
     </section>
 
@@ -339,8 +382,12 @@
           <p class="email">info@chalmersmediacartel.com</p>
           <!-- Update with real contact email -->
           <div class="social-links">
-            <a href="https://instagram.com/ChalmersMediaCartel" aria-label="Instagram" target="_blank" rel="noopener">&#x1F4F7;</a>
-            <a href="https://facebook.com/ChalmersMedia" aria-label="Facebook" target="_blank" rel="noopener">&#x1F4F1;</a>
+            <a href="https://instagram.com/ChalmersMediaCartel" aria-label="Instagram" target="_blank" rel="noopener">
+              <img src="instagram-logo.svg" alt="Instagram logo">
+            </a>
+            <a href="https://facebook.com/ChalmersMedia" aria-label="Facebook" target="_blank" rel="noopener">
+              <img src="facebook-logo.png" alt="Facebook logo">
+            </a>
           </div>
           <div class="contact-notes">
             <p>We respond quickly to credential approvals and can coordinate credential forms, vest pick-up, and access zones in advance.</p>
