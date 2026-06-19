@@ -573,9 +573,15 @@ textarea:focus-visible {
   font-weight: 700;
 }
 
-.contact-info .email {
+.contact-info .email,
+.section-header .email {
   font-weight: 700;
   color: var(--color-accent);
+}
+
+.section-header .email {
+  font-size: 1.1rem;
+  margin: 0.75rem 0 1.25rem;
 }
 
 .social-links {

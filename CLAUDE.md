@@ -10,17 +10,19 @@ Never add, infer, or "fill in" a credential, insurance claim, client name, or ex
 
 ## Stack
 
-Flat static site, no build process, no framework:
-- `index.html` — the entire single-page site (hash-anchor navigation: `#home`, `#portfolio`, `#services`, `#press`, `#about`, `#contact`)
-- `main.js` — vanilla JS: mobile nav toggle, portfolio category filtering, contact form validation
-- `styles.css` — custom CSS, no Tailwind/Bootstrap
-- `docs/` — press kit and media verification PDFs, linked from the Press & Credentials section
-- Deployed to Vercel from `github.com/realjwill/chalmersmediacartel` (`main` branch); no `vercel.json` needed for a static site like this
+Flat static site, no build process, no framework. Two pages now, split by job:
+- `index.html` — the portfolio/marketing page: hero, portfolio, services, about, contact (hash-anchor navigation: `#home`, `#portfolio`, `#services`, `#about`, `#contact`)
+- `credentials.html` — the dedicated verification page: press kit download, who we cover, coverage experience, standards/insurance, and a direct-contact block. Kept deliberately plain (no animated hero) so it reads as an official reference document, not a sales page. This is the page meant to be linked from a press credential application.
+- `main.js` — vanilla JS shared by both pages: mobile nav toggle, portfolio category filtering, contact form validation. Selectors are guarded (`if (el)` / empty `forEach`), so it's safe to include on a page that doesn't have all the elements.
+- `styles.css` — custom CSS, no Tailwind/Bootstrap, shared by both pages
+- `docs/` — press kit and media verification PDFs, linked from `credentials.html` and the header's persistent "Press Kit" button
+- Deployed to Vercel from `github.com/realjwill/chalmersmediacartel` (`main` branch); no `vercel.json` needed for a static multi-page site like this
 
-To preview locally, just open `index.html` in a browser — no dev server required.
+To preview locally, just open `index.html` or `credentials.html` directly in a browser — no dev server required.
 
 ## Conventions
 
 - Adding a portfolio item: add a new `.portfolio-item` block in the portfolio section of `index.html` with the right `data-category` (`sports`, `music`, or `travel`) so the existing filter buttons in `main.js` pick it up.
 - The contact form currently validates client-side and shows a fake success message but discards the data (`main.js`, end of the submit handler, marked with a `TODO`). Don't wire this up without checking `PLAN.md` first — it's an intentionally deferred phase, not an oversight.
 - Social links: only link to profiles that are real and live. A dead `href="#"` icon looks worse on a verification page than no icon at all.
+- Nav links are page-aware, not templated: each HTML file's header has its own copy of the nav with correct relative paths (`index.html#section` from `credentials.html`, bare `#section` from `index.html`). If you add a third page, update the nav in both existing files too — there's no shared partial.

@@ -1,6 +1,8 @@
 # Goal
 
-This site exists so event organizers can verify Chalmers Media Cartel's legitimacy when the team applies for press passes. It is a credential-verification page, not a marketing or lead-gen funnel — SEO, analytics, and traffic growth are not priorities here.
+This site exists so event organizers can verify Chalmers Media Cartel's legitimacy when the team applies for press passes. It is a credential-verification site, not a marketing or lead-gen funnel — SEO, analytics, and traffic growth are not priorities here.
+
+The client didn't want the verification content and the portfolio/marketing content sharing one page, so the site is split in two: `index.html` is the portfolio/about/contact page, and `credentials.html` is the standalone verification page meant to be linked directly from a press credential application. Keep that split intact — don't fold `credentials.html` back into `index.html` as a section.
 
 ## What "done" looks like for this version
 
